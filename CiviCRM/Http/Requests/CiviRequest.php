@@ -3,8 +3,8 @@
 namespace Circle\CiviCRM\Http\Requests;
 
 use Circle\CiviCRM\Http\Methods;
-use Laminas\Diactoros\Request;
-use Laminas\Diactoros\Uri;
+use GuzzleHttp\Psr7\Request;
+use GuzzleHttp\Psr7\Uri;
 use Psr\Http\Message\RequestInterface;
 use RuntimeException;
 
@@ -55,8 +55,6 @@ class CiviRequest extends AbstractRequestBuilder
             $url = sprintf("%s?params=%s", $url, urlencode($json));
         }
 
-        return (new Request())
-            ->withMethod($method)
-            ->withUri(new Uri($url));
+        return new Request($method, new Uri($url));
     }
 }
