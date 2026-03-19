@@ -1,6 +1,14 @@
-# civicrm-api
+# civicrm-api (fork)
 
-civicrm-api is a Composer package that allows developers to interact with a [CiviCRM](https://civicrm.org) instance 
+> **This is a fork of [circle-interactive/civicrm-api](https://github.com/circle-interactive/civicrm-api).**
+>
+> The original package depends on `laminas/laminas-diactoros`, which does not support PHP 8.4+.
+> This fork replaces it with `guzzlehttp/psr7`, restoring compatibility with modern PHP versions.
+> All other functionality is unchanged.
+> 
+> The original author is reportedly no longer working in the CiviCRM world, and the original repo was unsupported.
+
+civicrm-api is a Composer package that allows developers to interact with a [CiviCRM](https://civicrm.org) instance
 using the REST API v4 functionality within CiviCRM.
 
 This code is intended to be used outside of a CiviCRM deployment environment. As such, the codebase adheres to PSR-12
@@ -8,11 +16,27 @@ coding standards instead of Drupal/Wordpress/CiviCRM coding standards.
 
 ## Installation
 
-To install the library, run the following command:
+To use this fork, add the repository to your project's `composer.json`:
 
-`composer require circle-interactive/civicrm-api`
+```json
+{
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "https://github.com/cheveuxroux69/civicrm-api"
+    }
+  ],
+  "require": {
+    "circle-interactive/civicrm-api": "dev-master"
+  }
+}
+```
+
+Then run `composer update`.
 
 ## Requirements
+
+_These might be out of date_
 
 1. The CiviCRM server **must** be running on v5.47 or later. 
 
@@ -160,8 +184,8 @@ To run tests, run `composer test`. The library uses Pest for automated testing, 
 
 ## Support
 
-The technical team at [Circle Interactive](https://www.circle-interactive.co.uk) are responsible for the maintenance of this
-library. Circle offer CiviCRM implementations for third-sector clients of any kind, no matter the size.
+The original library was created by [Circle Interactive](https://www.circle-interactive.co.uk).
+This fork is maintained by [cheveuxroux69](https://github.com/cheveuxroux69).
 
 ## License
 

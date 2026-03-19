@@ -1,21 +1,26 @@
 {
   "name": "circle-interactive/civicrm-api",
   "type": "library",
-  "description": "An API library to enable and facilitate interacting with a remote CiviCRM site.",
+  "description": "Fork of circle-interactive/civicrm-api — replaced laminas-diactoros with guzzlehttp/psr7 for PHP 8.2+ compatibility.",
   "keywords": ["civicrm", "remote api library", "developer api"],
-  "homepage": "https://www.github.com/circle-interactive/civicrm-api",
+  "homepage": "https://github.com/cheveuxroux69/civicrm-api",
   "license": "AGPL-3.0",
   "authors": [
     {
       "name": "Matt Trim",
       "email": "matt@circle-interactive.co.uk",
-      "homepage": "https://www.circle-interactive.co.uk"
+      "homepage": "https://www.circle-interactive.co.uk",
+      "role": "Original author"
+    },
+    {
+      "name": "Piers G",
+      "role": "Fork maintainer"
     }
   ],
   "support": {
-    "docs": "https://www.github.com/circle-interactive/civicrm-api",
-    "issues": "https://github.com/circle-interactive/civicrm-api/issues",
-    "source": "https://github.com/circle-interactive/civicrm-api"
+    "docs": "https://github.com/cheveuxroux69/civicrm-api",
+    "issues": "https://github.com/cheveuxroux69/civicrm-api/issues",
+    "source": "https://github.com/cheveuxroux69/civicrm-api"
   },
   "require": {
     "php": "^8.2",
